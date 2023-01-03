@@ -1,0 +1,219 @@
+body {
+    background: black;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+.container {
+    overflow: hidden;
+    padding: 10px;
+}
+
+i {
+    color: white;
+}
+
+.slider-card {
+    min-width: 10rem;
+    height: 16rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider {
+    position: relative;
+}
+
+.card {
+    position: relative;
+    border: none;
+    min-width: 10rem;
+    height: 15rem;
+    overflow-x: hidden;
+    margin: 10px;
+}
+
+.left-side::before {
+    content: "Fortnite";
+    position: absolute;
+    color: white;
+    font-size: 6rem;
+    font-family: Cursive;
+    font-weight: bolder;
+    opacity: 0.3;
+    bottom: 15%;
+    left: 8%;
+}
+
+.update-set {
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.card1 {
+    width: 130px;
+    height: 130px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+    display: block;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.card1:hover .update-img {
+    transform: scale(1.2);
+    filter: blur(5px);
+    transition: 0.5s;
+}
+
+.card1:hover .update-details {
+    filter: blur(0px);
+    z-index: 200;
+    transition: 0.5s;
+    color: white;
+}
+
+.card1 img {
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    z-index: 12;
+    position: absolute;
+}
+
+.right-side{
+    width: 50%;
+    height: 100%;
+
+}
+.update-details {
+    padding: 5px;
+    font-size: 0.5rem;
+    color: white;
+    position: absolute;
+    transition: 0.5s;
+}
+.online-page {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow-x:hidden ;
+}
+
+.online-left{
+    width: 50%;
+    height: 100%;
+    background: url(./images/animationimg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.online-right{
+    width: 50%;
+    height: 100%;
+    overflow-x:hidden ;
+}
+
+.left-side-a {
+    animation: anima1 3s;
+    transition: 0.5s;
+  
+}
+@keyframes anima1 {
+    0%{
+        width: 0%;
+        height: 100%;
+        opacity: 0;
+    }
+    100%{
+        width: 50%;
+        height: 100%;
+        opacity: 1;
+    }
+}
+.login-page{
+    width: 100%;
+    height: 110vh;
+}
+.login-left{
+    background-image: url(./images/main2.jpg);
+    height: 100%;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+
+}
+.login-right{
+    width: 50%;
+    height: 100%;
+}
+
+
+/* media ............................... */
+@media (max-width:768px) {
+    .right-side{
+        width: 100%;
+        height: 100%;
+    
+    }
+    .online-left{
+        width: 100%;
+        height: 50%;
+        background: url(./images/animationimg.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+    .online-page {
+        width: 100%;
+        height: 110vh;
+        position: relative;
+        overflow-x:hidden ;
+    }
+    .online-right{
+        width: 100%;
+        height: 50%;
+        overflow-x:hidden ;
+    }
+    @keyframes anima1 {
+        0%{
+            width: 0%;
+            height: 50%;
+            opacity: 0;
+        }
+        100%{
+            width: 100%;
+            height: 50%;
+            opacity: 1;
+        }
+    }
+    .login-page{
+        width: 100%;
+        height: 110vh;
+        margin-top: 20px;
+    }
+    .login-left{
+        background-image: url(./images/main2.jpg);
+        height: 50%;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+    
+    }
+    .login-right{
+        width: 100%;
+        height: 50%;
+    }
+}
